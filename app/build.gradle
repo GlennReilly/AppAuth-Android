@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 apply plugin: 'checkstyle'
 apply from: '../config/android-common.gradle'
 apply from: '../config/keystore.gradle'
@@ -12,7 +14,7 @@ android {
         // Make sure this is consistent with the redirect URI used in res/raw/auth_config.json,
         // or specify additional redirect URIs in AndroidManifest.xml
         manifestPlaceholders = [
-                'appAuthRedirectScheme': 'net.openid.appauthdemo'
+                'appAuthRedirectScheme': 'www.rfs.cognitodemo'
         ]
     }
 
@@ -52,6 +54,10 @@ dependencies {
     implementation 'joda-time:joda-time:2.10'
 
     annotationProcessor "com.github.bumptech.glide:compiler:${project.glideVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply from: '../config/style.gradle'
+repositories {
+    mavenCentral()
+}

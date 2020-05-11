@@ -37,6 +37,10 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="net.openid.appauthdemo.HANDLE_AUTHORIZATION_RESPONSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
 
         <activity
@@ -44,6 +48,33 @@
                 android:label="@string/app_name_short"
                 android:theme="@style/AppTheme"
                 android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <activity android:name=".CallbackActivity">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"
+                    android:host="www.rfs.cognitodemo"
+                    android:path="/oauth2redirect"/>
+            </intent-filter>-->
+
+<!--            <intent-filter android:label="filter_view_http_callback">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="www.rfs.cognitodemo"
+                    android:pathPrefix="/done" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="net.openid.appauthdemo.HANDLE_AUTHORIZATION_RESPONSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>-->
         </activity>
 
         <!--
@@ -68,8 +99,23 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:scheme="https"
-                  android:host="appauth.demo-app.io"
+                  android:host="www.rfs.cognitodemo"
                   android:path="/oauth2redirect"/>
+            </intent-filter>
+            <intent-filter android:label="filter_view_http_callback">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="www.rfs.cognitodemo"
+                    android:pathPrefix="/done" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="net.openid.appauthdemo.HANDLE_AUTHORIZATION_RESPONSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
     </application>

@@ -1,11 +1,11 @@
 {
-  "client_id": "",
-  "redirect_uri": "net.openid.appauthdemo:/oauth2redirect",
-  "authorization_scope": "openid email profile",
+  "client_id": "2bhomavrd1pmsc770ppin6tre5",
+  "redirect_uri": "https://www.rfs.cognitodemo/done",
+  "authorization_scope": "email profile",
   "discovery_uri": "",
-  "authorization_endpoint_uri": "",
-  "token_endpoint_uri": "",
+  "authorization_endpoint_uri": "https://rfs-test.auth.ap-southeast-2.amazoncognito.com/oauth2/authorize",
+  "token_endpoint_uri": "https://rfs-test.auth.ap-southeast-2.amazoncognito.com/oauth2/token",
   "registration_endpoint_uri": "",
-  "user_info_endpoint_uri": "",
+  "user_info_endpoint_uri": "https://rfs-test.auth.ap-southeast-2.amazoncognito.com/oauth2/userInfo",
   "https_required": true
 }
